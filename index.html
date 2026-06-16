@@ -1,222 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computer Science Website</title>
 
-<h1>Computer Science</h1>
+    <style>
 
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="services.html">Services</a> |
-    <a href="contact.html">Contact</a>
-    <a href="gallery.html">Gallery</a>
+        body{
+            background: linear-gradient(to right, #dbeafe, #eff6ff);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-</nav>
+        h1{
+            text-align: center;
+            color: #003366;
+        }
 
+        h2{
+            text-align: center;
+            color: #004080;
+        }
 
-<h2>The purpose of this website is to educate people about Computer Science and technology.</h2>
+        /* Navigation */
+        nav{
+            background-color: #003366;
+            text-align: center;
+            padding: 15px;
+        }
 
-<h>This website provides learning resources such as tutorials, notes, articles, and programming examples.The website helps beginners understand programming languages and computer science concepts.</h>
+        nav a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 15px;
+            font-weight: bold;
+        }
 
-<h>This website promotes awareness of technological developments and innovations in the modern world.The website encourages problem-solving, creativity, and critical thinking skills.</h>
+        nav a:hover{
+            color: yellow;
+        }
 
-<h>This website supports students and learners who want to build careers in Computer Science and Software Engineering.The website creates a platform where users can share ideas, knowledge, and experiences related to technology.</h>
+        /* Table */
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
 
-<h>To support academic growth. The website can provide career guidance, interview tips, project ideas, and information about computer science professions.</h>
+        caption{
+            background-color: #003366;
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            font-weight: bold;
+        }
 
-<!-- Unordered List -->
-<h2>Computer Science Topics</h2>
-<ul>
-    <li>Programming</li>
-    <li>Web Development</li>
-    <li>Cybersecurity</li>
-    <li>Database Management</li>
-    <li>Artificial Intelligence</li>
-</ul>
+        th{
+            background-color: #0066cc;
+            color: white;
+            padding: 12px;
+        }
 
-<!-- Ordered List -->
-<h2>Steps to Learn Computer Science</h2>
-<ol>
-    <li>Learn Computer Basics</li>
-    <li>Study Programming Languages</li>
-    <li>Practice Coding Regularly</li>
-    <li>Build Projects</li>
-    <li>Apply for Internships or Jobs</li>
-</ol>
+        td{
+            background-color: #cce6ff;
+            text-align: center;
+            padding: 10px;
+        }
 
-<!-- Images from the Internet -->
-<h2>Computer Science Images</h2>
+        table, th, td{
+            border: 1px solid black;
+        }
 
-<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" 
-     alt="Programming Code" 
-     width="400">
+        /* Gallery Grid */
+        .gallery{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
 
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" 
-     alt="Computer Technology" 
-     width="400">
+        .gallery img,
+        .gallery video{
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
 
-<h2>Computer Science Images</h2>
+        .section{
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 10px gray;
+        }
 
-<!-- Clickable Image -->
-<a href="about.html">
-    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
-         alt="Programming code on a computer screen"
-         width="300"
-         height="200">
-</a>
+    </style>
 
-<!-- Image 2 -->
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
-     alt="Students learning computer science"
-     width="300"
-     height="200">
+</head>
 
-<!-- Image 3 -->
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-     alt="Web development workspace with laptop"
-     width="300"
-     height="200">
+<body>
 
-<!-- Image 4 -->
-<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
-     alt="Software developer writing code"
-     width="300"
-     height="200">
+    <h1>Computer Science</h1>
 
-<!-- Image 5 -->
-<img src="https://images.unsplash.com/photo-1563986768609-322da13575f3"
-     alt="Cybersecurity and network protection concept"
-     width="300"
-     height="200">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
 
+    <div class="section">
 
+        <h2>Computer Science Courses</h2>
 
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="services.html">Services</a> |
-    <a href="contact.html">Contact</a>
-</nav>
+        <table>
+            <caption>Computer Science Course Catalogue</caption>
 
-<h2>Computer Science Fields</h2>
+            <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Duration</th>
+                <th>Level</th>
+                <th>Application</th>
+            </tr>
 
-<ul>
-    <li>Programming
-        <ul>
-            <li>C Programming</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-        </ul>
-    </li>
+            <tr>
+                <td>CS101</td>
+                <td>Programming</td>
+                <td>12 Weeks</td>
+                <td>Beginner</td>
+                <td>Software Development</td>
+            </tr>
 
-    <li>Networking
-        <ul>
-            <li>Network Security</li>
-            <li>Cloud Computing</li>
-        </ul>
-    </li>
+            <tr>
+                <td>CS102</td>
+                <td>Web Development</td>
+                <td>10 Weeks</td>
+                <td>Beginner</td>
+                <td>Website Design</td>
+            </tr>
 
-    <li>Database Management
-        <ul>
-            <li>MySQL</li>
-            <li>Oracle Database</li>
-        </ul>
-    </li>
+            <tr>
+                <td>CS201</td>
+                <td>Database Systems</td>
+                <td>14 Weeks</td>
+                <td>Intermediate</td>
+                <td>Data Management</td>
+            </tr>
 
-    <li>Cybersecurity</li>
-    <li>Artificial Intelligence</li>
-</ul>
+            <tr>
+                <td>CS202</td>
+                <td>Computer Networks</td>
+                <td>12 Weeks</td>
+                <td>Intermediate</td>
+                <td>Network Administration</td>
+            </tr>
 
+            <tr>
+                <td>CS301</td>
+                <td>Cybersecurity</td>
+                <td>16 Weeks</td>
+                <td>Advanced</td>
+                <td>Information Security</td>
+            </tr>
 
-<h2>Popular Computer Science Courses</h2>
+        </table>
 
-<table border="1">
-    <caption>Computer Science Courses and Their Applications</caption>
+    </div>
 
-    <tr>
-        <th>Course ID</th>
-        <th>Course Name</th>
-        <th>Duration</th>
-        <th>Level</th>
-        <th>Application</th>
-    </tr>
+    <div class="section">
 
-    <tr>
-        <td>CS101</td>
-        <td>Introduction to Programming</td>
-        <td>12 Weeks</td>
-        <td>Beginner</td>
-        <td>Software Development</td>
-    </tr>
+        <h2>Computer Science Media Gallery</h2>
 
-    <tr>
-        <td>CS102</td>
-        <td>Web Development</td>
-        <td>10 Weeks</td>
-        <td>Beginner</td>
-        <td>Website Creation</td>
-    </tr>
+        <div class="gallery">
 
-    <tr>
-        <td>CS201</td>
-        <td>Database Systems</td>
-        <td>14 Weeks</td>
-        <td>Intermediate</td>
-        <td>Data Management</td>
-    </tr>
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
+                 alt="Programming Code">
 
-    <tr>
-        <td>CS202</td>
-        <td>Computer Networks</td>
-        <td>12 Weeks</td>
-        <td>Intermediate</td>
-        <td>Network Administration</td>
-    </tr>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                 alt="Web Development">
 
-    <tr>
-        <td>CS301</td>
-        <td>Cybersecurity</td>
-        <td>16 Weeks</td>
-        <td>Advanced</td>
-        <td>Information Security</td>
-    </tr>
-</table>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
 
-<h2>Introduction to Computer Science Audio</h2>
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+                 alt="Software Development">
 
-<audio controls>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+        </div>
 
-<h2>Introduction to Computer Science Audio</h2>
+    </div>
 
-<audio controls>
-    <source src="audio/computer-science-audio.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-<h2>Computer Science Podcast</h2>
-
-<audio controls>
-    <source src="computer-science-podcast.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-<h2>Computer Science and Technology Video</h2>
-
-<video width="600" controls>
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-<h2>Introduction to Computer Science</h2>
-
-<iframe
-    width="600"
-    height="340"
-    src="https://www.youtube.com/embed/SzJ46YA_RaA"
-    title="Introduction to Computer Science"
-    allowfullscreen>
-</iframe>
-
-<a href="https://www.freecodecamp.org" target="_blank">
-    FreeCodeCamp - Learn Coding for Free
-</a>
+</body>
+</html>
