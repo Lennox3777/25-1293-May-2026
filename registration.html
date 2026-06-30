@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+
+        body{
+            background:#f4f4f4;
+            font-family:Arial,sans-serif;
+        }
+
+        .container{
+            width:450px;
+            margin:50px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:#003366;
+        }
+
+        input, select{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            margin-bottom:15px;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#003366;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0066cc;
+        }
+
+    </style>
+
+    <script>
+
+        function validateForm(){
+
+            let name = document.getElementById("fullname").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let gender = document.getElementById("gender").value;
+            let password = document.getElementById("password").value;
+
+            if(name==""){
+                alert("Enter your name");
+                return false;
+            }
+
+            if(email.indexOf("@")==-1 || email.indexOf(".")==-1){
+                alert("Invalid Email");
+                return false;
+            }
+
+            if(phone.length<10){
+                alert("Invalid Phone Number");
+                return false;
+            }
+
+            if(gender==""){
+                alert("Select Gender");
+                return false;
+            }
+
+            if(password.length<6){
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>User Registration</h2>
+
+<form action="register.php" method="POST"
+onsubmit="return validateForm()">
+
+<label>Full Name</label>
+<input type="text" name="fullname" id="fullname">
+
+<label>Email</label>
+<input type="text" name="email" id="email">
+
+<label>Phone Number</label>
+<input type="text" name="phone" id="phone">
+
+<label>Gender</label>
+<select name="gender" id="gender">
+    <option value="">Select Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+</select>
+
+<label>Password</label>
+<input type="password" name="password" id="password">
+
+<button type="submit">Register</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
